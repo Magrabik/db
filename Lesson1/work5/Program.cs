@@ -5,4 +5,4 @@ if (num < 0)
 {
      mod = -num;
 }
-System.Console.WriteLine(mod);
+System.Console.WriteLine($"{mod} is abs of {num}");
