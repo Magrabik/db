@@ -20,16 +20,22 @@ bool ValidateNumber(int number)
 int SumNumbers(int number)
 {
      int sum = 0;
-     for(int i = 1; i <= number; i ++)
+     for (int i = 1; i <= number; i++)
      {
-          sum +=i;
+          sum += i;
      }
      return sum;
 }
 
+int SumGauss(int number)
+{
+     return (int)((number / 2) * (1 + number));
+}
+
 int number = Promt("Введите число");
-if(ValidateNumber(number))
+if (ValidateNumber(number))
 {
      int sum = SumNumbers(number);
-     System.Console.WriteLine($"Сумма чисел от 1 до {number} равна {sum}");
+     int sumGauss = SumGauss(number);
+     System.Console.WriteLine($"Сумма чисел от 1 до {number} равна {sum}, а Гаусс говорит {sumGauss}");
 }
